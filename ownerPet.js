@@ -41,3 +41,45 @@ printNameOfSameAge(yeseoPet);
 //이름을 출력하는 함수 printNameOfSameAge를 작성하시오.
 //printNameOfSameAge(minukPet) ==> cat 이 출력되어야 함
 //printNameOfSameAge(yeseoPet) ==> cow 가 출력되어야 함
+
+const sports = [
+  {
+    name: 'football',
+    internship: 3,
+  },
+  {
+    name: 'wrestling',
+    internship: 1,
+  },
+  {
+    name: 'hockey',
+    internship: 2,
+  },
+  {
+    name: 'fencing',
+    intership: 10,
+  },
+  {
+    name: 'judo',
+    intership: 5,
+  }
+];
+
+const yeseoPlayer = {
+  internship: 2,
+};
+
+const minukPlayer = {
+  internship: 1,
+};
+
+const printNameOfSameYear = (playerInternship) => {
+  const year = sports.map(val => {
+    if(playerInternship.internship === val.internship){
+      console.log(val.name);
+    }
+  });
+}
+
+printNameOfSameYear(yeseoPlayer);
+printNameOfSameYear(minukPlayer);
